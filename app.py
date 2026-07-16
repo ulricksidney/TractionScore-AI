@@ -21,6 +21,9 @@ st.set_page_config(
 
 
 st.title("TractionScore AI")
+st.sidebar.markdown("Pilot research prototype")
+st.warning("Privacy Notice: This tool does not collect names, emails, dates of birth, or any identifiable information.")
+st.caption("Disclaimer: This tool provides a screening estimate based on reported hair-care practices and is not a diagnosis of traction alopecia.")
 
 st.write(
 """
@@ -30,7 +33,6 @@ This research prototype uses patient-reported hair-care practices
 to estimate the likelihood of clinically significant traction alopecia.
 """
 )
-
 
 # -------------------------
 # Patient questions
