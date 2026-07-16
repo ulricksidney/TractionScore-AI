@@ -218,21 +218,6 @@ if st.button("Calculate TractionScore"):
         "These factors helped the AI make its estimate. "
         "They should not be interpreted as proof that any one factor caused your result."
     )
-    # -------------------------
-    # SHAP explanation plot
-    # -------------------------
-
-    st.write("### AI explanation")
-
-    fig, ax = plt.subplots(figsize=(8,5))
-
-    shap.plots.waterfall(
-        shap_values[0],
-        max_display=10,
-        show=False
-    )
-
-    st.pyplot(fig)
 
 
     if prediction == 1:
