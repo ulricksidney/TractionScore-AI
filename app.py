@@ -26,7 +26,16 @@ st.set_page_config(
 
 
 st.title("TractionScore AI")
+st.image(
+    "images/Traction Score AI Logo.png",
+    width=180
+)
 st.sidebar.markdown("Pilot research prototype")
+st.image(
+    "images/1. Traction alopecia.png",
+    caption="Common patterns of traction alopecia.",
+    use_container_width=True
+)
 st.warning(
     "Privacy Notice: Your responses are used only to calculate your result during this session. "
     "No names, email addresses, dates of birth, or other personally identifiable information are requested."
@@ -257,6 +266,20 @@ Continue practising healthy hair-care habits and seek medical advice if you noti
         - Maintain scalp health.
         """
     )
+st.divider()
+
+st.subheader("Help improve TractionScore AI")
+
+st.write(
+    "You can help improve future versions of this research tool by completing our anonymous feedback questionnaire."
+)
+
+st.image(
+    "images/6. TractionScore AI QR code.png",
+    width=250
+)
+
+st.caption("Scan the QR code to access the questionnaire.")
 
 st.divider()
 
