@@ -219,20 +219,16 @@ st.caption(
     "They should not be interpreted as proof that any one factor caused your result."
 )
 
+if prediction == 1:
+    st.error(
+        """There is a higher estimated likelihood that your responses are consistent with clinically significant traction alopecia.
 
-    if prediction == 1:
+Consider arranging an assessment with a dermatologist or another healthcare professional experienced in hair and scalp disorders, especially if you have persistent hair thinning, scalp pain, or patches of hair loss."""
+    )
 
+    st.subheader("Next steps")
 
-        st.error(
-        "There is a higher estimated likelihood that your responses are consistent with clinically significant traction alopecia.
-
-Consider arranging an assessment with a dermatologist or another healthcare professional experienced in hair and scalp disorders, especially if you have persistent hair thinning, scalp pain, or patches of hair loss."
-        )
-
-
-        st.subheader("Next steps")
-
-        st.markdown(
+    st.markdown(
         """
         - Avoid hairstyles that cause pain or scalp tenderness.
         - Reduce prolonged tight hairstyles.
@@ -242,37 +238,30 @@ Consider arranging an assessment with a dermatologist or another healthcare prof
         - Minimize excessive heat exposure.
         - Seek professional evaluation if thinning progresses.
         """
-        )
+    )
 
+else:
+    st.success(
+        """Your responses suggest a lower estimated likelihood of clinically significant traction alopecia.
 
-    else:
+Continue practising healthy hair-care habits and seek medical advice if you notice increasing hair thinning, persistent scalp discomfort, or other concerning changes."""
+    )
 
+    st.subheader("Hair health recommendations")
 
-        st.success(
-        "Your responses suggest a lower estimated likelihood of clinically significant traction alopecia.
-
-Continue practising healthy hair-care habits and seek medical advice if you notice increasing hair thinning, persistent scalp discomfort, or other concerning changes."
-        )
-
-
-        st.subheader("Hair health recommendations")
-
-        st.markdown(
+    st.markdown(
         """
         - Continue gentle hair-care practices.
         - Avoid painful hairstyles.
         - Monitor for changes in hair density.
         - Maintain scalp health.
         """
-        )
+    )
 
-
-st.caption(
-"st.divider()
+st.divider()
 
 st.caption(
     "TractionScore AI is a research screening tool developed to estimate the likelihood of clinically significant traction alopecia based on self-reported information. "
     "It is not a diagnostic test and should not replace assessment by a qualified healthcare professional. "
     "If you have ongoing hair loss, scalp pain, sores, or other concerns, please seek medical advice."
-)"
 )
